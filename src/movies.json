@@ -1,0 +1,44 @@
+[
+    {
+      "title": "Oblivion",
+      "yearMovie": "(2012)",
+      "calification": "8.1",
+      "describe": "Earths mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity...",
+      "runTime": "2h21",
+      "MMPA": "PG-13",
+      "release": "1 May 2015",
+      "director": "Joss Whedon",
+      "actorOne": "Robert Downey Jr.",
+      "actorTwo": "Chris Evans",
+      "actorThree": "Chris Hemsworth",
+      "movieImage": "./src/images/uploads/mv1.jpg"
+    },
+    {
+      "title":"Into the wild",
+      "yearMovie": "(2014)",
+      "calification": "7.8",
+      "describe": "As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat...",
+      "runTime": "2h21",
+      "MMPA": "PG-13",
+      "release": "1 May 2015",
+      "director": "Anthony Russo, Joe Russo",
+      "actorOne": "Chris Evans",
+      "actorTwo": "Samuel L. Jackson",
+      "actorThree": "Scarlett Johansson",
+      "movieImage": "./src/images/uploads/mv2.jpg"
+    },
+    {
+      "title":"Blade Runner",
+        "yearMovie":"(2015)",
+        "calification":"7.3",
+        "describe":"As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat...",
+        "runTime":"2h21",
+        "MMPA":"PG-13",
+        "release":"1 May 2015",
+        "director":"Anthony Russo, Joe Russo",
+        "actorOne":"Chris Evans",
+        "actorTwo":"Samuel L. Jackson",
+        "actorThree":"Scarlett Johansson",
+        "movieImage":"./src/images/uploads/mv2.jpg"
+    }
+  ]
