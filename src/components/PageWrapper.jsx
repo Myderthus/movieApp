@@ -3,23 +3,6 @@ export default function PageWrapper(props) {
         <div>
             <div className="App">
 
-                {/* <select name="" id="">
-  <option value="muuu">muuu</option>
-</select>
-
-<Preloader />
-
-<LoginWrapper />
-
-<SingupContent />
-
-<HtHeader />
-
-<HeroCommonHero />
-
-<PageSingleMovieList /> */}
-
-
                 {/* <!--preloading--> */}
                 <div id="preloader">
                     <img className="logo" src="./src/images/logo1.png" alt="" width="119" height="58" />
@@ -28,10 +11,6 @@ export default function PageWrapper(props) {
                         <span></span>
                     </div>
                 </div>
-
-
-                {/* <!--end of preloading-->
-<!--login form popup--> */}
                 <div className="login-wrapper" id="login-content">
                     <div className="login-content">
                         <a href="#" className="close">x</a>

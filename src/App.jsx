@@ -18,27 +18,50 @@ function App() {
   const [movies, setMovies] = useState([]);
   const totalMoviePages = 4;
 
+  const url = 'https://lucasmoy.dev/data/react/peliculas.json'
+
   useEffect(() => {
     movieFinder();
   }, [])
 
-  const movieFinder = async () => {
-    let url = 'https://lucasmoy.dev/data/react/peliculas.json'
+  async function movieFinder () {
 
     // https://cors-anywhere.herokuapp.com/
-
-    let response = await fetch(url, {
-      "method": 'GET',
-      "mode": 'no-cors',
-      "headers": {
-        "Accept": 'application/json',
-        "Content-Type": 'application/json'
-        //"origin": 'https://lucasmoy.dev'
-      }
-    });
-    let movieJson = await response.json();
-    setMovies(movieJson);
+    try {
+      const response = await fetch(url, {
+        "method": 'GET',
+        "mode": 'no-cors',
+        "headers": {
+          "Accept": 'application/json',
+          "Content-Type": 'application/json'
+        }
+      });
+      const json = await response.json();
+      setMovies(json);
+    } catch(error) {
+      console.log(error);
+    }
   }
+  // const movieFinder = async () => {
+  //   let url = 'https://lucasmoy.dev/data/react/peliculas.json'
+
+  //   // https://cors-anywhere.herokuapp.com/
+
+  //   let response = await fetch(url, {
+  //     "method": 'GET',
+  //     "mode": 'no-cors',
+  //     "headers": {
+  //       "Accept": 'application/json',
+  //       "Content-Type": 'application/json'
+  //     }
+  //   }).then((response) => {
+  //     response.json().then(data => {
+  //       setMovies = data;
+  //     })
+  //   }).catch((err) => {
+  //     console.log(err);
+  //   })
+  // }
 
   const countMovie = () => {
     // movies = movies.slice(
@@ -52,15 +75,13 @@ function App() {
     return Math.ceil(countMoviePages / totalMoviePages)
   }
 
-  countMovie();
-
 
   return (
     <PageWrapper>
 
-    <button onClick={movieFinder}>
-      Pruebame
-    </button>
+      <button onClick={movieFinder}>
+        Pruebame
+      </button>
 
       {movies.map(movie =>
         <MovieItem
@@ -75,10 +96,10 @@ function App() {
         />)}
 
       <Pagination page={currentPage} total={getTotalPages()} onChange={(page) => {
-      {/* <Pagination page={1} total={currentPage} onChange={(page) => { */}
+        {/* <Pagination page={1} total={currentPage} onChange={(page) => { */ }
 
         setCurrentPage(page);
-      }}/>        
+      }} />
     </PageWrapper>
   )
 }
