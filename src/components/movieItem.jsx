@@ -1,14 +1,14 @@
 export default function MovieItem(props) {
     return (
         <div className="movie-item-style-2">
-            <img src={props.movieImage} alt="" />
+            <img src={props.img} alt="" />
             <div className="mv-item-infor">
-                <h6><a href="moviesingle.html">{props.title} <span>{props.yearMovie}</span></a></h6>
-                <p className="rate"><i className="ion-android-star"></i><span>{props.calification}</span> /10</p>
-                <p className="describe">{props.describe}</p>
-                <p className="run-time"> Duración: {props.runTime}’    .     <span>MMPA: {props.MMPA} </span>    .     <span>Lanzamiento: {props.release}</span></p>
+                <h6><a href="moviesingle.html">{props.titulo} </a></h6>
+                <p className="rate"><i className="ion-android-star"></i><span>{props.clasificacion}</span> /10</p>
+                <p className="describe">{props.descripcion}</p>
+                <p className="run-time"> Duración: {props.duracion}    .     <span>Lanzamiento: {props.fecha}</span></p>
                 <p>Director: <a href="#">{props.director}</a></p>
-                <p>Actores: <a href="#">{props.actorOne},</a> <a href="#">{props.actorTwo},</a> <a href="#"> {props.actorThree}</a></p>
+                <p>Actores: <a href="#">{props.actores}</a></p>
             </div>
         </div>
     )

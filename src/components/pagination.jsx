@@ -10,12 +10,13 @@ export default function Pagination(props) {
         for (let i = 0; i < props.total; i++) {
             let page = i + 1;
             result.push(
-                <a 
-                onClick={() => props.onChange(page)} 
-                className={props.page === page ? "active" : ''}
-                href="#">
-                    {i + 1}
-                </a>);
+                <a
+                    onClick={() => props.onChange(page)}
+                    className={props.page === page ? "active" : ''}
+                    href="#">
+                    {page}
+                </a>
+            );
         }
         return result;
     }
